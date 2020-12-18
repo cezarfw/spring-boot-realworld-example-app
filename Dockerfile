@@ -15,6 +15,7 @@ COPY . /home/gradle/project
 RUN gradle build
 
 
+
 FROM java:jre
 
 WORKDIR /home/gradle/project
