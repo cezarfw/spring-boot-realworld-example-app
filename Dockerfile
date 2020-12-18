@@ -6,7 +6,7 @@ EXPOSE 8080
 
 USER root
 
-RUN apk update
+RUN apt-get update
 
 ENV GRADLE_USER_HOME /home/gradle/project
 
@@ -15,7 +15,7 @@ COPY . /home/gradle/project
 RUN gradle build
 
 
-FROM java:jre-alpine
+FROM java:jre
 
 WORKDIR /home/gradle/project
 
